@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html class="h-100" lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+    <title>SPACE COWGIRLS</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <link rel= "stylesheet" href= "sheet.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Righteous&family=Source+Code+Pro:ital@1&family=Ubuntu+Mono&display=swap" rel="stylesheet">
+</head>
+
+
+<body class="h-100">
+<div class="container h-100">
+    <div class="d-flex text-center justify-content-center align-items-center h-100">
+        <div class="title text-center">
+            <h1 class="display-1">Yeehaw, Space Cowgirls!</h1>
+            <h3 class="" id="author">created by: derek sumpmann</h3>
+            <h3 class="" id="year">2022</h3>
+            <button class="button" id="titleNext">Giddyup!</button>
+        </div>
+
+        <div class="setting story1 text-center hide">
+            <div class="typing">
+                <p>In the year 4430, a squad of fearless cowgirls zoomed throughout the galaxies.<br>
+                Their mission was nothing but hedonist: get rich or have fun trying.<br>
+                But one day, the cowgirls bit off a little more than they could chew ...</p>
+            </div>
+            <button class="button" id="storyNext">>></button>
+        </div>
+
+        <div class="setting story2 hide">
+            <div class="typing">
+                <p>In an epic, 18-hour long fight with the indominable Gilgabron Girls,<br>
+                our fearless cowgirls nearly lost their whole ship<br>
+                and their lives, too.</p>
+            </div>
+            <button class="button" id="storyNext2">>></button>
+        </div>
+
+        <div class ="setting story3 hide">
+            <div class="typing">
+                <p>We meet the girls at the Cletus' Repair Shop.<br>
+                "Ladies, I sorry to report that I'll need to spend a whole month on this damn thing.<br>
+                I can tell you right now, this work ain't gonna be cheap.<br>
+                I estimate 💰275k, and that doesn't include tip.?<br> 
+                I suspect you don't have that money, do ya?</p>
+            </div>
+            <button class="button" id="storyNext3">>></button>
+        </div>
+
+        <div class="setting story4 hide">
+            <div class="typing">
+                <p>Since I love you ladies, Mama Cletus will cut you a favor...this time.<br>
+                I'll let you have my best loaner.<br>
+                She's a piece of junk, but she'll do the trick!</p>
+            </div>
+            <button class="button" id="storyNext4">>></button>
+        </div>
+
+        <div class="setting story5 hide">
+            <div class="typing">
+                <p>Now go out and steal some money from some of those ugly pirate bastards!<br>
+                You'll need it if you ever want y'all's ship back, sisters!" </p>
+            </div>
+            <button class="button" id="storyNext5">>></button>
+        </div>
+
+        <div class="setting story6 hide">
+           <div class="typing">
+                <p>Aboard the loaner ship, the cowgirls head off in search of some cash.<br>
+                The ladies know most wealthy thugs hang out behind Jupiter's moon Ganymede,<br>
+                so they hit the starry trail and hope for the best.</p>
+            </div>
+            <button class="button" id="storyNext6">>></button>
+        </div>
+
+
+
+        <div class="battleSearch result hide container">
+            <p>Keeping my eyes peeled, boss.<br>
+            There's gotta be another ship here somewhere...</p>
+            <button class="button" id="battleBegin">>></button>
+        </div>
+        <div class="battleChoice result hide container">
+            <p class="message"><span id="lookout"></span><br>What do you think we should do, captain?!<br>
+            They're headed our way!</p>
+            <button class="button" id="attack">Attack</button>
+            <button class="button" id="run">Run</button>
+        </div>
+        <div class="attackWin result hide container">
+            <p>We did it!!! I can't believe it!!!</br>
+            We even stole all their money, too! That much closer to getting our ship back!</p>
+            <button class="button next6" id="bigWin">Who's next?</button>
+        </div>
+        <div class="attackLose result hide container">
+            <p>OUCH! We took some serious damage. Better luck next time.</p>
+            <button class="button next6" id="bigLose">Who's next?</button>
+        </div>
+
+        <div class="runWin result hide container">
+            <p>PHEW! We made it out unscathed. </br>
+            We missed out on a lot of loot though. Blerg.</p>
+            <button class="button next6" id="smallWin">Who's next?</button>
+        </div>
+
+        <div class="runLose result message hide container">
+            <p>How the heck did they catch up to us?!<br>
+            At least we didn't try and fight.<br>
+            We only took a fraction of the damage they could've dealt!</p>
+            <button class="button next6" id="smallLose">Who's next?</button>
+        </div>
+        
+
+
+        <div class="hide myShipStats row stats fixed-bottom justify-content-around h-20">
+            <div class="healthBarBox" data-total="100" data-value="100">
+                <div class="healthBar"></div>
+            </div>
+            <p class="" id="loot"></p>
+        </div>
+    
+        <div class="ending hide" id="game-over">
+            <p>We're done for! We're trapped floating in space AND in debt now!</p>
+            <button class="button" id="start-over">Try Again?</button>
+        </div> 
+        
+        <div class="ending hide" id="thrived">
+            <p>Look at that! We've got the money to get our ship back girls!!<br>
+            There's even some to spare AFTER tip! Let's get a drink. YEEHAW!</p>
+            <button class="button" id="once-more">Again?</button>
+        </div>
+    
+    </div>  
+</div>
+
+
+<script src="code.js"></script>
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+</body>
+</html>

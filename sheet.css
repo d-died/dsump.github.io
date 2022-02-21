@@ -1,0 +1,116 @@
+
+
+.title {
+    font-family: Bebas Neue, cursive;
+    color: white;
+}
+
+.setting {
+    font-family: Ubuntu Mono, monospace;
+    font-size: 18pt;
+}
+
+.hide {
+    display: none;
+}
+
+.stats {
+    background-color: #9400D3;
+    color: white;
+    font-size: 40pt;
+    padding: 5pt;
+    margin-block: auto;
+}
+
+body {
+    color: white;
+    background-color: black;
+    font-family: Ubuntu Mono, monospace;
+    font-size: 17pt;
+}
+
+.button {
+    background-color: #ffffff;
+    border: 7px solid #ff00ff; 
+    border-radius: 7pt;
+    padding: 15pt 15pt;
+    color: #000000;
+    text-align: center;
+    font-family: Righteous;
+    font-size: 20pt;
+    display: inline-block;
+    margin: 15pt 15pt 15pt 15pt;
+}
+
+.button:hover {
+    background-color: #ffccff;
+}
+
+.message {
+    font-family: Source Code Pro, monospace;
+    animation: 2s anim-message ease-in; 
+    color: #FF69B4;
+}
+
+@keyframes anim-message {
+    0% {
+        color: black;
+        transform: scale(0);
+        opacity: 0;
+        text-shadow: 0 0 0 black;
+    }
+    25% {
+        color: red;
+        transform: scale(1.5);
+        opacity: 1;
+        text-shadow: 3pt 10pt 5pt #F8F8FF;
+    }
+    50% {
+        color:#FF3399;
+        transform: scale(1);
+        opacity: 1;
+        text-shadow: 1pt 0 0 black;
+    }
+    100% {
+        color: #FF69B4;
+        transform: scale(1);
+        opacity: 1;
+        text-shadow: 1pt 0 0 black;
+    }
+}
+
+.healthBar {
+    background: #228B22;
+    width: 100%;
+    height: 40pt;
+    border-radius: 5pt;
+    position: relative;
+    transition: width .8s linear;
+}
+
+.healthBarBox {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    width: 400pt;
+    height: 40pt;
+    margin-block: auto;
+    position: relative;
+    -webkit-border-radius: 5pt;
+    -moz-border-radius: 5pt;
+    border-radius: 5pt;
+    background-color: #a9a9a9
+}
+
+.typing {
+    width: 100%;
+    animation: typing 5s steps(40);
+    white-space: nowrap;
+    overflow: hidden;
+}
+
+@keyframes typing {
+    from {
+        width: 0
+    }
+}
